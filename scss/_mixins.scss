@@ -14,7 +14,7 @@
   width: 0;
   height: 0;
   content: "";
-
+  
   @if $direction == "up" {
     border-left: $size solid transparent;
     border-right: $size solid transparent;
@@ -53,4 +53,46 @@
   @media only screen and (min-width: $min-screen) and (max-width: $max-screen) {
     @content;
   }
+}
+//h1-large
+@mixin h-($word) {
+  @if $word == 'large' {
+    font-size: 100px;
+    line-height: 100px;
+    font-weight: 700;
+  }
+  
+  @else if $word == '3' {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+  
+  @else if $word == 'small' {
+    font-size: 64px;
+    line-height: 58px;
+    font-weight: 700;
+  }
+  
+  @else if $word = '2' {
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 700;
+  }
+}
+
+// body font 
+@mixin body-($number) {
+  @if $number == '1' {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @if $number == '2' {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
 }
