@@ -1,0 +1,38 @@
+.sitenav{
+  display: flex;
+  align-items: center;
+ 
+  &__list{
+@include reset-list;
+display: flex;
+align-items: center;
+  }
+  &__link{
+    display: block;
+    text-decoration: none;
+    @include body-(1);
+    color: #fff;
+    transition: color 0.4s ease;
+
+    &:hover{
+      color:  #F67E7E;
+    }
+  }
+}
+
+.site-header__sitenav{
+  flex-grow: 1;
+  margin-left: 80px;
+
+  & .sitenav__list{
+    max-width: 700px;
+    flex-wrap: wrap;
+    margin-right: 20px;
+  }
+
+  .sitenav__item{
+    & + .sitenav__item{
+      margin-left: 40px;
+    }
+  }
+}
