@@ -540,4 +540,63 @@ img {
   background-color: #fff;
   color: #002529;
 }
+
+.hero {
+  background-color: #014E56;
+  background-image: url("../img/hero-left-bg.png"), url("../img/hero-right-bg.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 56px left calc(50% - 750px), bottom -100px right calc(50% - 300px);
+}
+
+.hero .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 56px;
+  padding-bottom: 255px;
+}
+
+.hero__heading {
+  font-size: 100px;
+  line-height: 100px;
+  font-weight: 700;
+  margin: 0;
+  width: 550px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.hero__heading span {
+  color: #F67E7E;
+}
+
+.hero__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 445px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+}
+
+.hero__text-before-h::before {
+  background-color: #79C8C7;
+}
+
+.hero__text::before {
+  width: 50px;
+  height: 4px;
+  content: '';
+  display: inline-block;
+  margin-bottom: auto;
+}
 /*# sourceMappingURL=main.css.map */

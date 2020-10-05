@@ -1,0 +1,40 @@
+.hero{
+  background-color: #014E56;
+  background-image: url('../img/hero-left-bg.png'), url('../img/hero-right-bg.png');
+background-repeat: no-repeat, no-repeat;
+background-position: top 56px left calc(50% - 750px), bottom -100px right calc(50% - 300px);
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 56px;
+    padding-bottom: 255px;
+  }
+  &__heading{
+    @include h-(large);
+    margin: 0;
+    width: 550px;
+    flex-shrink: 0;
+     span{
+      color: #F67E7E;
+    }
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+    max-width: 445px;
+    &-before-h::before{
+      background-color: #79C8C7;
+    }
+    @include body-(1);
+    margin: 0;
+   &::before{
+     width: 50px;
+     height: 4px;
+     content: '';
+     display: inline-block;
+     margin-bottom: auto;
+   }
+  }
+
+}
