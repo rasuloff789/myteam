@@ -1,9 +1,9 @@
 .site-header__button{
-margin-left: auto;
-@include breakpoint-down(750px){
-  margin-left: 0;
-  margin-top: 36px;
-}
+  margin-left: auto;
+  @include breakpoint-down(750px){
+    margin-left: 0;
+    margin-top: 36px;
+  }
 }
 
 .button {

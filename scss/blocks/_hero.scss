@@ -1,9 +1,9 @@
 .hero{
   &-home{
     background-color: #014E56;
-  background-image: url('../img/hero-left-bg.png'), url('../img/hero-right-bg.png');
-  background-repeat: no-repeat, no-repeat;
-  background-position: top 56px left calc(50% - 750px), bottom -100px right calc(50% - 300px);
+    background-image: url('../img/hero-left-bg.png'), url('../img/hero-right-bg.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 56px left calc(50% - 750px), bottom -100px right calc(50% - 300px);
   }
   
   .container{
@@ -41,7 +41,7 @@
   }
   @include breakpoint-down(950px){
     &-home{
-    background-position: top 56px left calc(50% - 750px), bottom -100px center;
+      background-position: top 56px left calc(50% - 750px), bottom -100px center;
     }
     .container{
       flex-direction: column;
@@ -64,12 +64,12 @@
   @include breakpoint-down (750px){
     .container{
       padding-top: 35px;
-    margin-top: -3px;
+      margin-top: -3px;
     }
   }
   @include breakpoint-down(375px){
     &-home{
-    background-size: contain,100% auto;
+      background-size: contain,100% auto;
     }
     .container{
       padding-bottom: 200px;

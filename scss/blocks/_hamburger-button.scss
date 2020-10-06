@@ -32,13 +32,13 @@
     display: inline-block;
   }
 }
-    @media only screen and (max-width:750px) {
-      .open-btn .hamburger{
-      position: fixed;
-      right: 25px;
-      top: 48px;
-      }
-    }
+@media only screen and (max-width:750px) {
+  .open-btn .hamburger{
+    position: fixed;
+    right: 25px;
+    top: 48px;
+  }
+}
 
 .hamburger-box {
   width: 20px;
