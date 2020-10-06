@@ -26,3 +26,14 @@
     color:  #002529;
   }
 }
+
+.button-dark{
+  border: 2px solid #012F34;
+  color: #012F34;
+  transition: color 0.4s ease, 
+  background-color 0.4s ease;
+  &:hover{
+    color: #fff;
+    background-color: #012F34;
+  }
+}

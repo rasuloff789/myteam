@@ -1,0 +1,55 @@
+.contact{
+  background-color: #F67E7E;
+  
+  &__container{
+    display: flex;
+    align-items: center;
+    max-width: 973px;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container{
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    padding-top: 76px;
+    padding-bottom: 76px;
+    background-image: url('../../img/contancts-section-left-bg.png');
+    background-position: left  bottom -122px;
+    background-repeat: no-repeat;
+  }
+  &__heading{
+    margin: 0;
+    margin-right: auto;
+    color: #012F34;
+    @include h-(2);
+  }
+  @include breakpoint-down(800px){
+    &__container{
+      max-width: 573px;
+    }
+    .container{
+      padding-top: 84px;
+      padding-bottom: 84px;
+    }
+    &__heading{
+      line-height: 1;
+      font-size: 32px;
+    }
+  }
+  @include breakpoint-down(500px){
+    &__container{
+      flex-direction: column;
+    }
+    &__heading{
+      display: inline-block;
+      margin-bottom: 24px;
+      margin-left: 0;
+      width: 100%;
+      text-align: center;
+      max-width: 100%;
+    }
+  }
+}
