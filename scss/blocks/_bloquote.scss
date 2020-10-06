@@ -1,0 +1,101 @@
+.bloquote{
+  background-color: #004047;
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background-image: url('../img/succes-left-bg.png'),url('../img/succes-right-bg.png');
+    background-repeat: no-repeat,no-repeat;
+    background-position: top left , bottom -100px right ;
+  }
+  &__heading{
+    @include h-(2);
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 92px;
+    max-width: 932px;
+    text-align: center;
+    display: inline-block;
+    span{
+      color: #79C8C7;
+    }
+  }
+  &__list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__kady::after{
+    background-image: url('../img/kady-baker-img.jpg');
+  }
+  &__aiysha::after{
+    background-image: url('../img/aiysha-reese-img.jpg');
+  }
+  &__arthur::after{
+    background-image: url('../img/arthur-clarke-img.jpg');
+  }
+  &__box{
+    &::before{
+      content: '';
+      position: absolute;
+      z-index: 1;
+      width: 67px;
+      height: 56px;
+      top: 21px;
+      left: 50%;
+      display: inline-block;
+      transform: translateX(-50%)  translateY(-100%);
+      background-image: url('../img/bloquote-before.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    position: relative;
+    z-index: 5;
+    max-width: 350px;
+    margin: 0;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &::after{
+      width: 65px;
+      height: 65px;
+      content: '';
+      display: inline-block;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin-top: 32px;
+    }
+  }
+  &__text{
+    @include body-(2);
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 24px;
+    &::before{
+      content: open-quote;
+    }
+    &::after{
+      content: close-quote;
+    }
+  }
+  &__author{
+    @include body-(1);
+    margin-top: auto;
+    margin-bottom: 2px;
+    color: #79C8C7;
+    text-align: center;
+  }
+  &__position{
+    color: #fff;
+    text-align: center;
+    line-height: 18px;
+    font-size: 13px;
+    font-style: italic;
+  }
+}

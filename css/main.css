@@ -1055,4 +1055,148 @@ img {
     margin-bottom: 8px;
   }
 }
+
+.bloquote {
+  background-color: #004047;
+}
+
+.bloquote .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 140px;
+  padding-bottom: 140px;
+  background-image: url("../img/succes-left-bg.png"), url("../img/succes-right-bg.png");
+  background-repeat: no-repeat,no-repeat;
+  background-position: top left , bottom -100px right;
+}
+
+.bloquote__heading {
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 92px;
+  max-width: 932px;
+  text-align: center;
+  display: inline-block;
+}
+
+.bloquote__heading span {
+  color: #79C8C7;
+}
+
+.bloquote__list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bloquote__kady::after {
+  background-image: url("../img/kady-baker-img.jpg");
+}
+
+.bloquote__aiysha::after {
+  background-image: url("../img/aiysha-reese-img.jpg");
+}
+
+.bloquote__arthur::after {
+  background-image: url("../img/arthur-clarke-img.jpg");
+}
+
+.bloquote__box {
+  position: relative;
+  z-index: 5;
+  max-width: 350px;
+  margin: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bloquote__box::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  width: 67px;
+  height: 56px;
+  top: 21px;
+  left: 50%;
+  display: inline-block;
+  -webkit-transform: translateX(-50%) translateY(-100%);
+          transform: translateX(-50%) translateY(-100%);
+  background-image: url("../img/bloquote-before.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bloquote__box::after {
+  width: 65px;
+  height: 65px;
+  content: '';
+  display: inline-block;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: 32px;
+}
+
+.bloquote__text {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.bloquote__text::before {
+  content: open-quote;
+}
+
+.bloquote__text::after {
+  content: close-quote;
+}
+
+.bloquote__author {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: auto;
+  margin-bottom: 2px;
+  color: #79C8C7;
+  text-align: center;
+}
+
+.bloquote__position {
+  color: #fff;
+  text-align: center;
+  line-height: 18px;
+  font-size: 13px;
+  font-style: italic;
+}
 /*# sourceMappingURL=main.css.map */
