@@ -625,6 +625,18 @@ img {
   color: #002529;
 }
 
+.button-dark {
+  border: 2px solid #012F34;
+  color: #012F34;
+  -webkit-transition: color 0.4s ease,  background-color 0.4s ease;
+  transition: color 0.4s ease,  background-color 0.4s ease;
+}
+
+.button-dark:hover {
+  color: #fff;
+  background-color: #012F34;
+}
+
 .hero-home {
   background-color: #014E56;
   background-image: url("../img/hero-left-bg.png"), url("../img/hero-right-bg.png");
@@ -1227,6 +1239,81 @@ img {
   .bloquote .container {
     padding-top: 140px;
     padding-bottom: 184px;
+  }
+}
+
+.contact {
+  background-color: #F67E7E;
+}
+
+.contact__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 973px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact .container {
+  max-width: 1440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 76px;
+  padding-bottom: 76px;
+  background-image: url("../../img/contancts-section-left-bg.png");
+  background-position: left  bottom -122px;
+  background-repeat: no-repeat;
+}
+
+.contact__heading {
+  margin: 0;
+  margin-right: auto;
+  color: #012F34;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact__container {
+    max-width: 573px;
+  }
+  .contact .container {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+  .contact__heading {
+    line-height: 1;
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contact__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact__heading {
+    display: inline-block;
+    margin-bottom: 24px;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    max-width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */
