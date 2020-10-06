@@ -1,9 +1,11 @@
 .hero{
-  background-color: #014E56;
+  &-home{
+    background-color: #014E56;
   background-image: url('../img/hero-left-bg.png'), url('../img/hero-right-bg.png');
-background-repeat: no-repeat, no-repeat;
-background-position: top 56px left calc(50% - 750px), bottom -100px right calc(50% - 300px);
-
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 56px left calc(50% - 750px), bottom -100px right calc(50% - 300px);
+  }
+  
   .container{
     display: flex;
     justify-content: space-between;
@@ -13,9 +15,9 @@ background-position: top 56px left calc(50% - 750px), bottom -100px right calc(5
   &__heading{
     @include h-(large);
     margin: 0;
-    width: 550px;
+    max-width: 550px;
     flex-shrink: 0;
-     span{
+    span{
       color: #F67E7E;
     }
   }
@@ -23,18 +25,54 @@ background-position: top 56px left calc(50% - 750px), bottom -100px right calc(5
     display: flex;
     flex-direction: column;
     max-width: 445px;
+    color: #fff;
     &-before-h::before{
       background-color: #79C8C7;
     }
     @include body-(1);
     margin: 0;
-   &::before{
-     width: 50px;
-     height: 4px;
-     content: '';
-     display: inline-block;
-     margin-bottom: auto;
-   }
+    &::before{
+      width: 50px;
+      height: 4px;
+      content: '';
+      display: inline-block;
+      margin-bottom: auto;
+    }
   }
-
+  @include breakpoint-down(950px){
+    &-home{
+    background-position: top 56px left calc(50% - 750px), bottom -100px center;
+    }
+    .container{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-top: 40px;
+    }
+    &__heading{
+      @include h-(small);
+      margin-bottom: 24px;
+    }
+    &__text{
+      @include body-(2);
+      line-height: 28px;
+      &::before{
+        display: none;
+      }
+    }
+  }
+  @include breakpoint-down(375px){
+    &-home{
+    background-size: contain,100% auto;
+    }
+    .container{
+      padding-top: 7px;
+      padding-bottom: 200px;
+    }
+    &__heading{
+      font-size: 40px;
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+  }
 }
