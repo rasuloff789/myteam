@@ -104,19 +104,19 @@
       padding-top: 100px;
       padding-bottom: 100px;
     }
-&__heading{
-  line-height: 1;
-  font-size: 32px;
-  max-width: 573px;
-  margin-bottom: 84px;
-}
-&__list{
-  justify-content: center;
-}
-&__box{
-  max-width: 573px;
-  margin-bottom: 84px;
-}
+    &__heading{
+      line-height: 1;
+      font-size: 32px;
+      max-width: 573px;
+      margin-bottom: 84px;
+    }
+    &__list{
+      justify-content: center;
+    }
+    &__box{
+      max-width: 573px;
+      margin-bottom: 84px;
+    }
   }
   @include breakpoint-down(375px){
     .container{
