@@ -438,7 +438,15 @@ img {
 .site-header {
   padding-top: 73px;
   padding-bottom: 73px;
+  position: relative;
   background-color: #014E56;
+}
+
+@media only screen and (max-width: 750px) {
+  .site-header {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 }
 
 .site-header__container {
@@ -448,6 +456,14 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (max-width: 750px) {
+  .site-header__container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .site-link {
@@ -517,7 +533,7 @@ img {
 
 @media only screen and (max-width: 750px) {
   .site-header__sitenav {
-    position: absolute;
+    position: fixed;
     display: none;
     z-index: 1;
     top: 0;
@@ -536,6 +552,9 @@ img {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    background-image: url("../img/sitenav-open-bg.png");
+    background-repeat: no-repeat;
+    background-position: bottom right -100px;
   }
   .site-header__sitenav--open {
     display: -webkit-box;
@@ -698,12 +717,18 @@ img {
   }
 }
 
+@media only screen and (max-width: 750px) {
+  .hero .container {
+    padding-top: 35px;
+    margin-top: -3px;
+  }
+}
+
 @media only screen and (max-width: 375px) {
   .hero-home {
     background-size: contain,100% auto;
   }
   .hero .container {
-    padding-top: 7px;
     padding-bottom: 200px;
   }
   .hero__heading {
@@ -752,6 +777,14 @@ img {
 @media only screen and (max-width: 750px) {
   .hamburger {
     display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .open-btn .hamburger {
+    position: fixed;
+    right: 25px;
+    top: 48px;
   }
 }
 
