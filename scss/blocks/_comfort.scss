@@ -1,10 +1,10 @@
 .comfort{
   padding-top: 200px;
-    padding-bottom: 140px;
-    background-color: #012F34;
-    background-image: url('../img/comfort-bg.png');
-    background-repeat: no-repeat;
-    background-position: bottom right -100px;
+  padding-bottom: 140px;
+  background-color: #012F34;
+  background-image: url('../img/comfort-bg.png');
+  background-repeat: no-repeat;
+  background-position: bottom right -100px;
   .container{
     display: flex;
     justify-content: space-between;
@@ -73,5 +73,42 @@
     @include body-(2);
     color: #fff;
     margin: 0;
+  }
+  @include breakpoint-down(800px){
+    padding-top: 136px;
+    padding-bottom: 100px;
+    background-position: top right -100px;
+    .container{
+      flex-direction: column;
+    }
+    &__heading{
+      max-width: 573px;
+      line-height: 1;
+      font-size: 32px;
+      margin-bottom: 64px;
+      &::before{
+        top: -32px;
+      }
+    }
+  }
+  @include breakpoint-down(375px){
+    padding-top: 100px;
+    padding-bottom: 64px;
+    &__heading{
+      max-width: 240px;
+      margin-bottom: 56px;
+    }
+    &__item{
+      flex-direction: column;
+      text-align: center;
+      max-width: 100%;
+      &::before{
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
+    }
+    &__name{
+      margin-bottom: 8px;
+    }
   }
 }
