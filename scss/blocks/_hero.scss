@@ -61,12 +61,17 @@
       }
     }
   }
+  @include breakpoint-down (750px){
+    .container{
+      padding-top: 35px;
+    margin-top: -3px;
+    }
+  }
   @include breakpoint-down(375px){
     &-home{
     background-size: contain,100% auto;
     }
     .container{
-      padding-top: 7px;
       padding-bottom: 200px;
     }
     &__heading{

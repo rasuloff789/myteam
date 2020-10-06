@@ -1,9 +1,20 @@
 .site-header{
   padding-top: 73px;
   padding-bottom: 73px;
+  position: relative;
   background-color: #014E56;
+  @include breakpoint-down ( 750px){
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
   &__container{
     display: flex;
     align-items: center;
+  }
+  @include breakpoint-down(750px){
+    &__container{
+      justify-content: space-between;
+
+    }
   }
 }
