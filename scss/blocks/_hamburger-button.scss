@@ -35,6 +35,7 @@
 @media only screen and (max-width:750px) {
   .open-btn .hamburger{
     position: fixed;
+    z-index: 20;
     right: 25px;
     top: 48px;
   }

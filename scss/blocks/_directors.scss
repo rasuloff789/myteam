@@ -1,0 +1,21 @@
+.directors{
+  &__item{
+    // max-width: 350px;
+    
+    &-box{
+      padding-top: 32px;
+      padding-bottom: 56px;
+      padding-right: 24px;
+      padding-left: 24px;
+    }
+  }
+  &__name{
+    @include body-(1);
+    color: #79C8C7;
+  }
+  
+}
+
+.front{
+  background-color: #012F34;
+}
