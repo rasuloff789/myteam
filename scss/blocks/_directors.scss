@@ -1,21 +1,186 @@
 .directors{
-  &__item{
-    // max-width: 350px;
-    
-    &-box{
-      padding-top: 32px;
-      padding-bottom: 56px;
-      padding-right: 24px;
-      padding-left: 24px;
+  background-color: #004047;
+  background-image: url('../img/directors-left-bg.png') , url('../img/directors-right-bg.png');
+  background-position: top left calc(50% - 720px) , right bottom;
+  background-repeat: no-repeat;
+  .container{
+    padding-top: 140px;
+    padding-bottom: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__heading{
+    @include h-(2);
+    margin-top: 0;
+    margin-bottom: 64px;
+    color: #fff;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    list-style-type: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+  @include breakpoint-down(1050px){
+    background-image: none;
+    .container{
+      background-image: url('../img/directors-left-bg.png') , url('../img/directors-right-bg.png');
+      background-position: top left -100px , right bottom;
+      background-repeat: no-repeat;
+      padding-top: 100px;
+      padding-bottom: 100px;
     }
+    &__heading{
+      font-size: 32px;
+      line-height: 1;
+      margin-bottom: 48px;
+      text-align: center;
+    }
+    &__list{
+      justify-content: space-around;
+    }
+  }
+  
+  @include breakpoint-down(750px){
+    .container{
+      background-image: url('../img/directors-left-bg.png') , url('../img/directors-right-bg.png');
+      background-position: top -100px left -100px , right bottom;
+      background-repeat: no-repeat;
+      padding-top: 88px;
+      padding-bottom: 88px;
+    }
+  }
+}
+.director{
+  max-width: 350px;
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  overflow: hidden;
+  padding-bottom: 30px;
+  // overflow-y: visible;
+  margin-bottom: 48px;
+  &-box{
+    padding-top: 32px;
+    padding-bottom: 56px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 350px;
+    flex-shrink: 0;
+    transition: transform  0.4s cubic-bezier(1,.41,.59,.89);
+  }
+  &__front{
+    background-color:  #012F34;
+    flex-shrink: 0;
+  }
+  &__front--open{
+    transform: translateX(100%);
+  }
+  &__back{
+    background-color: #002529;
+  }
+  &__back--open{
+    transform: translateX(-100%);
+  }
+  &__img{
+    border-radius: 50%;
+    margin-bottom: 12px;
+    
   }
   &__name{
     @include body-(1);
+    margin-top: 0;
+    margin-bottom: 0;
     color: #79C8C7;
   }
-  
-}
-
-.front{
-  background-color: #012F34;
+  &__position{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fff;
+    font-style: italic;
+  }
+  &__word{
+    @include body-(2);
+    color: #fff;
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+  &__socialist{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    list-style-type: none;
+    justify-content: center;
+  }
+  &__sociaitem{
+    
+    margin-left: 8px;
+    margin-right: 8px;
+    
+  }
+  &__socialink{
+    display: block;
+    img{
+      display: block;
+    }
+  }
+  &__button{
+    outline: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 6;
+    transform: translateX(-50%) ;
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    // padding: 20px;
+    padding: 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: #F67E7E;
+    transition: background-color 0.4s ease ,transform 0.4s ease;
+    &--open{
+      background-color: #79C8C7;
+      transform: translateX(-50%) rotate(45deg);
+    }
+    img{
+      // display: block;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  @include breakpoint-down(1050px){
+    width: 45%;
+    max-width: 45%;
+    &-box{
+      max-width: 100%;
+      width: 100%;
+    }
+    
+  }
+  @include breakpoint-down(750px){
+    width: 90%;
+    max-width: 90%;
+    &-box{
+      max-width: 100%;
+      width: 100%;
+    }
+    
+  }
 }
