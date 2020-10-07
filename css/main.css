@@ -1273,7 +1273,7 @@ img {
           justify-content: center;
   padding-top: 76px;
   padding-bottom: 76px;
-  background-image: url("../../img/contancts-section-left-bg.png");
+  background-image: url("../img/contancts-section-left-bg.png");
   background-position: left  bottom -122px;
   background-repeat: no-repeat;
 }
@@ -1315,6 +1315,185 @@ img {
     width: 100%;
     text-align: center;
     max-width: 100%;
+  }
+}
+
+.footer {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-color: #002529;
+}
+
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer__left-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__site-link {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.footer__sitenav {
+  max-width: 140px;
+  margin-top: auto;
+}
+
+.footer__sitenav-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__address-location {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+  opacity: 0.6;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer__company-number {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+  opacity: 0.6;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer__number-link {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.footer__company-social-copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 300px;
+  width: 100%;
+}
+
+.footer__company-social-list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  max-width: 105px;
+  width: 100%;
+  margin-left: auto;
+}
+
+.footer__company-copy {
+  margin-top: auto;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: right;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.footer__company-social-link svg {
+  display: block;
+}
+
+@media only screen and (max-width: 750px) {
+  .footer__address {
+    text-align: right;
+  }
+  .footer__company-social-copy {
+    max-width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 32px;
+  }
+  .footer__company-social-list {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .footer {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+  .footer .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .footer__address {
+    text-align: center;
+    margin-top: 24px;
+  }
+  .footer__company-social-copy {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 40px;
+  }
+  .footer__company-social-list {
+    margin-right: 0;
+    margin-bottom: 18.25px;
   }
 }
 
