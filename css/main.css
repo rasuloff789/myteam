@@ -535,7 +535,7 @@ img {
   .site-header__sitenav {
     position: fixed;
     display: none;
-    z-index: 1;
+    z-index: 10;
     top: 0;
     right: 0;
     width: 705%;
@@ -796,6 +796,7 @@ img {
 @media only screen and (max-width: 750px) {
   .open-btn .hamburger {
     position: fixed;
+    z-index: 20;
     right: 25px;
     top: 48px;
   }
@@ -1153,7 +1154,7 @@ img {
 .bloquote__box::before {
   content: '';
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   width: 67px;
   height: 56px;
   top: 21px;
@@ -1315,5 +1316,23 @@ img {
     text-align: center;
     max-width: 100%;
   }
+}
+
+.directors__item-box {
+  padding-top: 32px;
+  padding-bottom: 56px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.directors__name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #79C8C7;
+}
+
+.front {
+  background-color: #012F34;
 }
 /*# sourceMappingURL=main.css.map */
