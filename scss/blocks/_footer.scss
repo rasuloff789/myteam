@@ -1,0 +1,116 @@
+.footer{
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-color: #002529;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__left-box{
+    display: flex;
+    flex-direction: column;
+  }
+  &__site-link{
+    display: block;
+    margin-bottom: 24px;
+  }
+  &__sitenav{
+    max-width: 140px;
+    margin-top: auto;
+  }
+  &__sitenav-list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__address-location{
+    @include body-(2);
+    color: #fff;
+    opacity: 0.6;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &__company-number{
+    @include body-(2);
+    color: #fff;
+    opacity: 0.6;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &__number-link{
+    @include body-(2);
+    color: #fff;
+    opacity: 0.6;
+    text-decoration: none;
+  }
+  &__company-social-copy{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    width: 100%;
+  }
+  &__company-social-list{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    max-width: 105px;
+    width: 100%;
+    margin-left: auto;
+  }
+  &__company-copy{
+    margin-top: auto;
+    margin-bottom: 0;
+    @include body-(2);
+    text-align: right;
+    color: #FFFFFF;
+    opacity: 0.6;
+  }
+  &__company-social-link {
+    svg{
+      display: block;
+    }
+  }
+  @include breakpoint-down(750px){
+    &__address{
+      text-align: right;
+    }
+    &__company-social-copy{
+      max-width: 100%;
+      flex-direction: row;
+      margin-top: 32px;
+    }
+    &__company-social-list{
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+  @include breakpoint-down(500px){
+    padding-top: 65px;
+    padding-bottom: 65px;
+    .container{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+   &__address{
+     text-align: center;
+     margin-top: 24px;
+   }
+   &__company-social-copy{
+     flex-direction: column;
+     align-items: center;
+     margin-top: 40px;
+   }
+   &__company-social-list{
+     margin-right: 0;
+     margin-bottom: 18.25px;
+   }
+  }
+}
+
