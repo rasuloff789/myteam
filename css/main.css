@@ -1541,21 +1541,263 @@ img {
   }
 }
 
-.directors__item-box {
-  padding-top: 32px;
-  padding-bottom: 56px;
-  padding-right: 24px;
-  padding-left: 24px;
+.directors {
+  background-color: #004047;
+  background-image: url("../img/directors-left-bg.png"), url("../img/directors-right-bg.png");
+  background-position: top left calc(50% - 720px), right bottom;
+  background-repeat: no-repeat;
 }
 
-.directors__name {
+.directors .container {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.directors__heading {
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 64px;
+  color: #fff;
+}
+
+.directors__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 100%;
+  list-style-type: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 1050px) {
+  .directors {
+    background-image: none;
+  }
+  .directors .container {
+    background-image: url("../img/directors-left-bg.png"), url("../img/directors-right-bg.png");
+    background-position: top left -100px , right bottom;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .directors__heading {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 48px;
+    text-align: center;
+  }
+  .directors__list {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .directors .container {
+    background-image: url("../img/directors-left-bg.png"), url("../img/directors-right-bg.png");
+    background-position: top -100px left -100px , right bottom;
+    background-repeat: no-repeat;
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+}
+
+.director {
+  max-width: 350px;
+  position: relative;
+  z-index: 2;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  overflow: hidden;
+  padding-bottom: 30px;
+  margin-bottom: 48px;
+}
+
+.director-box {
+  padding-top: 32px;
+  padding-bottom: 56px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 350px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(1, 0.41, 0.59, 0.89);
+  transition: -webkit-transform 0.4s cubic-bezier(1, 0.41, 0.59, 0.89);
+  transition: transform 0.4s cubic-bezier(1, 0.41, 0.59, 0.89);
+  transition: transform 0.4s cubic-bezier(1, 0.41, 0.59, 0.89), -webkit-transform 0.4s cubic-bezier(1, 0.41, 0.59, 0.89);
+}
+
+.director__front {
+  background-color: #012F34;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.director__front--open {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.director__back {
+  background-color: #002529;
+}
+
+.director__back--open {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.director__img {
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.director__name {
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
+  margin-top: 0;
+  margin-bottom: 0;
   color: #79C8C7;
 }
 
-.front {
-  background-color: #012F34;
+.director__position {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #fff;
+  font-style: italic;
+}
+
+.director__word {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.director__socialist {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  width: 100%;
+  list-style-type: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.director__sociaitem {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.director__socialink {
+  display: block;
+}
+
+.director__socialink img {
+  display: block;
+}
+
+.director__button {
+  outline: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 6;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-color: #F67E7E;
+  -webkit-transition: background-color 0.4s ease ,-webkit-transform 0.4s ease;
+  transition: background-color 0.4s ease ,-webkit-transform 0.4s ease;
+  transition: background-color 0.4s ease ,transform 0.4s ease;
+  transition: background-color 0.4s ease ,transform 0.4s ease ,-webkit-transform 0.4s ease;
+}
+
+.director__button--open {
+  background-color: #79C8C7;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+}
+
+.director__button img {
+  width: 30px;
+  height: 30px;
+}
+
+@media only screen and (max-width: 1050px) {
+  .director {
+    width: 45%;
+    max-width: 45%;
+  }
+  .director-box {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .director {
+    width: 90%;
+    max-width: 90%;
+  }
+  .director-box {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
