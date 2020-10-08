@@ -44,7 +44,11 @@
       justify-content: space-around;
     }
   }
-  
+  @include breakpoint-down(1100px){
+    &__list{
+      justify-content: space-around;
+    }
+  }
   @include breakpoint-down(750px){
     .container{
       background-image: url('../img/directors-left-bg.png') , url('../img/directors-right-bg.png');
@@ -155,7 +159,7 @@
       height: 30px;
     }
   }
-  @include breakpoint-down(1050px){
+  @include breakpoint-down(1100px){
     width: 45%;
     max-width: 45%;
     &-box{
