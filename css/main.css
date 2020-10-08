@@ -1672,18 +1672,8 @@ img {
       flex-shrink: 0;
 }
 
-.director__front--open {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-}
-
 .director__back {
   background-color: #002529;
-}
-
-.director__back--open {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
 }
 
 .director__img {
@@ -1757,6 +1747,7 @@ img {
   display: inline-block;
   width: 56px;
   height: 56px;
+  cursor: pointer;
   padding: 0;
   font-size: 16px;
   display: -webkit-box;
@@ -1775,12 +1766,6 @@ img {
   transition: background-color 0.4s ease ,-webkit-transform 0.4s ease;
   transition: background-color 0.4s ease ,transform 0.4s ease;
   transition: background-color 0.4s ease ,transform 0.4s ease ,-webkit-transform 0.4s ease;
-}
-
-.director__button--open {
-  background-color: #79C8C7;
-  -webkit-transform: translateX(-50%) rotate(45deg);
-          transform: translateX(-50%) rotate(45deg);
 }
 
 .director__button img {
@@ -1808,5 +1793,21 @@ img {
     max-width: 100%;
     width: 100%;
   }
+}
+
+.director--open .director__back {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.director--open .director__front {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.director--open .director__button {
+  background-color: #79C8C7;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
 }
 /*# sourceMappingURL=main.css.map */

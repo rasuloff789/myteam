@@ -9,14 +9,13 @@ openButton.addEventListener('click',function(){
   
 });
 
-var directorButton = document.querySelector('.director__button');
+var directorsButton = document.querySelectorAll('.director__button');
 
-var frontBox = document.querySelector('.director__front');
+var directorsOpen = document.querySelectorAll('.director')
 
-var backBox = document.querySelector('.director__back');
 
-directorButton.addEventListener('click' , function(){
-  directorButton.classList.toggle('director__button--open');
-  frontBox.classList.toggle('director__front--open');
-  backBox.classList.toggle('director__back--open');
-})
+
+directorsButton.forEach(function(directorButton, index){
+  directorButton.addEventListener('click' , function(){
+    directorsOpen[index].classList.toggle("director--open")
+})})
