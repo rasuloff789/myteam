@@ -1817,4 +1817,78 @@ img {
   -webkit-transform: translateX(-50%) rotate(45deg);
           transform: translateX(-50%) rotate(45deg);
 }
+
+.clients {
+  background-color: #012F34;
+  padding: 140px 0;
+  background-image: url("../../img/clients-bg.png");
+  background-repeat: no-repeat;
+  background-position: top left calc(50% - 625px);
+}
+
+.clients .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clients__heading {
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 64px;
+  color: #fff;
+}
+
+.clients__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.client {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.client + .client {
+  margin-left: 20px;
+}
+
+.client__link {
+  display: inline-block;
+}
+
+.client__logo {
+  display: block;
+}
+
+.client__logo + .client__logo {
+  margin-left: 20px;
+}
 /*# sourceMappingURL=main.css.map */

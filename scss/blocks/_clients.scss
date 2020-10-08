@@ -1,0 +1,45 @@
+.clients{
+  background-color: #012F34;
+  padding: 140px 0;
+  background-image: url('../../img/clients-bg.png');
+  background-repeat: no-repeat;
+  background-position: top left calc(50% - 625px);
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__heading{
+    @include h-(2);
+    margin-top: 0;
+    margin-bottom: 64px;
+    color: #fff;
+  }
+  &__list{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.client{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & +  & {
+    margin-left: 20px;
+  }
+  &__link{
+    display: inline-block;
+  }
+  &__logo{
+    display: block;
+    & + & {
+      margin-left: 20px;
+    }
+  }
+}
+
