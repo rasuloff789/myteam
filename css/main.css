@@ -1931,4 +1931,101 @@ img {
     margin-top: 60px;
   }
 }
+
+.contactus {
+  background-color: #014E56;
+}
+
+.contactus .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contactus-askbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 500px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.contactus__heading {
+  font-size: 64px;
+  line-height: 100px;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.ask {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ask__list-heading {
+  font-size: 32px;
+  line-height: 48px;
+  color: #F67E7E;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.ask__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.ask-human::before {
+  background-image: url("../img/human-img.png");
+}
+
+.ask-setting::before {
+  background-image: url("../img/setting-img.png");
+}
+
+.ask-graphic::before {
+  background-image: url("../img/graphics-img.png");
+}
+
+.ask__item {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ask__item + .ask__item {
+  margin-top: 8px;
+}
+
+.ask__item::before {
+  width: 72px;
+  height: 72px;
+  content: '';
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-right: 23px;
+}
 /*# sourceMappingURL=main.css.map */

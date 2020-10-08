@@ -1,0 +1,69 @@
+.contactus{
+  background-color: #014E56;
+  .container{
+    display: flex;
+    justify-content: space-between;
+  }
+  &-askbox{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    flex-shrink: 0;
+  }
+  &__heading{
+    font-size: 64px;
+    line-height: 100px;
+    color:#fff ;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+}
+.ask{
+  display: flex;
+  flex-direction: column;
+  &__list-heading{
+    font-size: 32px;
+    line-height: 48px;
+    color: #F67E7E;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+  &__list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  &-human{
+    &::before{
+      background-image: url('../img/human-img.png');
+    }
+  }
+  &-setting{
+    &::before{
+      background-image: url('../img/setting-img.png');
+    }
+  }
+  &-graphic{
+    &::before{
+      background-image: url('../img/graphics-img.png');
+    }
+  }
+  &__item{
+    @include body-(1);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    & + & {
+      margin-top: 8px;
+    }
+    &::before{
+      width: 72px;
+      height: 72px;
+      content: '';
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin-right: 23px;
+    }
+  }
+}
