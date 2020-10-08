@@ -62,21 +62,21 @@
     </ul>
   </div>
  </div>
- <form action="echo.htmlacademy.ru" method="POST">
-   <label  class="submitform__label">
-    <input placeholder="Name" name="name" type="text">
-    <p class="form__valition">
+ <form class="aboutlist" action="echo.htmlacademy.ru" method="POST">
+   <label  class="aboutlist__label">
+    <input class="aboutlist__input" placeholder="Name" pattern="[a-zA-Z0-9]+" name="name" type="text">
+    <p class="aboutlist__valition">
       This field is required
     </p>
    </label>
-   <label  class="submitform__label">
-    <input placeholder="Email Address" name="email" type="email">
-    <p class="form__valition">
+   <label  class="aboutlist__label">
+    <input class="aboutlist__input" placeholder="Email Address" name="email" type="email">
+    <p class="aboutlist__valition">
       This field is required
     </p>
    </label>
-   <input placeholder="Company Name" name="company__name" type="text">
-   <input placeholder="Title" name="title" type="text">
+   <input class="aboutlist__input" placeholder="Company Name" name="company__name" type="text">
+   <input class="aboutlist__input" placeholder="Title" name="title" type="text">
    <textarea placeholder="Message" name="message"  ></textarea>
    <button class="button">submit</button>
  </form>
