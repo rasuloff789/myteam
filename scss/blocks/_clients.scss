@@ -14,6 +14,7 @@
     margin-top: 0;
     margin-bottom: 64px;
     color: #fff;
+    text-align: center;
   }
   &__list{
     display: flex;
@@ -23,6 +24,36 @@
     list-style-type: none;
     width: 100%;
     justify-content: space-between;
+  }
+  @include breakpoint-down (750px) {
+    
+  padding: 0 0;
+  background-image: none;
+  .container{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url('../../img/clients-bg.png');
+  background-repeat: no-repeat;
+  background-position: top -100px left  ;
+  }
+    &__heading{
+      font-size: 32px;
+      line-height: 1;
+      margin-bottom: 48px;
+    }
+  }
+  @include breakpoint-down(600px){
+    .container{
+      background-position: top -100px left -100px;
+      padding-top: 88px;
+      padding-bottom: 88px;
+    }
+    &__list{
+      flex-direction: column;
+    }
+    &__heading{
+      margin-bottom: 64px;
+    }
   }
 }
 .client{
@@ -37,8 +68,11 @@
   }
   &__logo{
     display: block;
-    & + & {
-      margin-left: 20px;
+  }
+  @include breakpoint-down(600px){
+    & +  & {
+      margin-left: 0;
+      margin-top: 60px;
     }
   }
 }
