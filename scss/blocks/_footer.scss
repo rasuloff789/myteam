@@ -31,6 +31,7 @@
     opacity: 0.6;
     margin-top: 0;
     margin-bottom: 0;
+    font-style: normal;
   }
   &__company-number{
     @include body-(2);
@@ -38,6 +39,7 @@
     opacity: 0.6;
     margin-top: 0;
     margin-bottom: 0;
+    font-style: normal;
   }
   &__number-link{
     @include body-(2);
@@ -71,8 +73,14 @@
     opacity: 0.6;
   }
   &__company-social-link {
+    
     svg{
+      color: #fff;
+      transition: color 0.4s ease;
       display: block;
+      &:hover{
+        color: #F67E7E;
+      }
     }
   }
   @include breakpoint-down(750px){
