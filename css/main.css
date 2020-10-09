@@ -610,6 +610,8 @@ img {
   border-radius: 24px;
   padding: 10px 32px;
   white-space: nowrap;
+  cursor: pointer;
+  outline: none;
 }
 
 .button-light {
@@ -635,6 +637,26 @@ img {
 .button-dark:hover {
   color: #fff;
   background-color: #012F34;
+}
+
+.button-submit {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #002529;
+  -webkit-transition: border-color 0.4s ease,  background-color 0.4s ease;
+  transition: border-color 0.4s ease,  background-color 0.4s ease;
+}
+
+.button-submit:hover {
+  background-color: #79C8C7;
+  border-color: #79C8C7;
+}
+
+.button-disable {
+  color: #002529;
+  border: 2px solid #fff;
+  background-color: #fff;
+  opacity: 0.25;
 }
 
 .hero-home {
@@ -1934,9 +1956,14 @@ img {
 
 .contactus {
   background-color: #014E56;
+  background-image: url("../img/contact-page-left-bg.png"), url("../img/contact-page-right-bg.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 47px left calc(50% - 725px), bottom 0px right calc(50% - 725px);
 }
 
 .contactus .container {
+  padding-top: 47px;
+  padding-bottom: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2063,22 +2090,73 @@ img {
   outline: transparent;
   background-color: transparent;
   border-bottom: 1px solid #979797;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+
+.aboutlist__input:focus:placeholder-shown::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.aboutlist__input:focus:placeholder-shown:-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.aboutlist__input:focus:placeholder-shown::-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.aboutlist__input:focus:placeholder-shown::placeholder {
+  color: #fff;
+  opacity: 1;
 }
 
 .aboutlist__input:not(:placeholder-shown):valid {
   border-bottom-color: green;
 }
 
+.aboutlist__input:not(:placeholder-shown):invalid {
+  border-bottom: 1px solid #F67E7E;
+  color: #F67E7E;
+}
+
+.aboutlist__input:focus:placeholder-shown ~ .aboutlist__valition {
+  visibility: visible;
+}
+
 .aboutlist__valition {
+  visibility: hidden;
   display: inline-block;
   color: #F67E7E;
-  font-size: 10px;
   line-height: 1;
   font-weight: bold;
   font-style: italic;
   margin-left: 14px;
   margin-top: 8px;
   margin-bottom: 8px;
-  font-size: 0;
+  font-size: 10px;
+}
+
+.aboutlist__title {
+  margin-top: 24px;
+}
+
+.aboutlist__message {
+  margin-top: 24px;
+  width: 100%;
+  padding: 0 14px 17px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba(255, 255, 255, 0.6);
+  border: none;
+  outline: transparent;
+  background-color: transparent;
+  border-bottom: 1px solid #979797;
+  resize: none;
+  margin-bottom: 24px;
 }
 /*# sourceMappingURL=main.css.map */

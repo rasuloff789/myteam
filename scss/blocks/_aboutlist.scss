@@ -21,20 +21,49 @@
     outline: transparent;
     background-color: transparent;
     border-bottom: 1px solid #979797;
+    transition: opacity 0.4s ease;
+    &:focus:placeholder-shown::placeholder{
+      color:#fff;
+      opacity: 1;
+    }
     &:not(:placeholder-shown):valid{
       border-bottom-color: green;
     }
+    &:not(:placeholder-shown):invalid{
+      border-bottom: 1px solid #F67E7E;
+      color: #F67E7E;
+    }
+    &:focus:placeholder-shown ~ .aboutlist__valition{
+     
+      visibility: visible;
+    }
   }
   &__valition{
+    visibility: hidden;
     display: inline-block;
     color: #F67E7E;
-    font-size: 10px;
     line-height: 1;
     font-weight: bold;
     font-style: italic;
     margin-left: 14px;
     margin-top: 8px;
     margin-bottom: 8px;
-    font-size: 0;
+    font-size: 10px;
+  }
+  &__title{
+    margin-top: 24px;
+  }
+  &__message{
+    margin-top: 24px;
+    width: 100%;
+    padding: 0 14px 17px;
+    @include body-(2);
+    color: rgba(255, 255, 255,.6);
+    border: none;
+    outline: transparent;
+    background-color: transparent;
+    border-bottom: 1px solid #979797;
+    resize: none;
+    margin-bottom: 24px;
   }
 }

@@ -1,6 +1,11 @@
 .contactus{
   background-color: #014E56;
+  background-image: url('../img/contact-page-left-bg.png') , url('../img/contact-page-right-bg.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position:top 47px left calc(50% - 725px) , bottom 0px right calc(50% - 725px) ;
   .container{
+    padding-top: 47px;
+    padding-bottom: 120px;
     display: flex;
     justify-content: space-between;
   }
