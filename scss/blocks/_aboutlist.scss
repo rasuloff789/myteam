@@ -4,12 +4,13 @@
   width: 100%;
   align-items: flex-start;
   max-width:  540px; 
+  flex-shrink: 0;
   &__label{
     width: 100%;
   }
   &__label:focus{
     .aboutlist__input{
-     background-color: #ccc;
+      background-color: #ccc;
     }
   }
   &__input{
@@ -34,7 +35,7 @@
       color: #F67E7E;
     }
     &:focus:placeholder-shown ~ .aboutlist__valition{
-     
+      
       visibility: visible;
     }
   }
@@ -65,5 +66,8 @@
     border-bottom: 1px solid #979797;
     resize: none;
     margin-bottom: 24px;
+  }
+  @include breakpoint-down(750px){
+    max-width: 100%;
   }
 }

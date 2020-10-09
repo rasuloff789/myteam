@@ -1970,6 +1970,8 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .contactus-askbox {
@@ -1991,6 +1993,46 @@ img {
   color: #fff;
   margin-top: 0;
   margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 1050px) {
+  .contactus {
+    background-image: none;
+  }
+  .contactus .container {
+    padding-top: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-image: url("../img/contact-page-left-bg.png"), url("../img/contact-page-right-bg.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top  left -100px , bottom  right -100px;
+  }
+  .contactus__heading {
+    text-align: center;
+    line-height: 1;
+  }
+  .contactus-askbox {
+    max-width: 100%;
+    margin-bottom: 64px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .contactus .container {
+    padding-top: 32px;
+    padding-bottom: 88px;
+    background-image: none, url("../img/contact-page-right-bg.png");
+    background-position: center center , bottom -100px  right -100px;
+  }
+  .contactus__heading {
+    font-size: 40px;
+    margin-bottom: 16px;
+  }
 }
 
 .ask {
@@ -2054,6 +2096,20 @@ img {
   background-repeat: no-repeat;
   background-position: center center;
   margin-right: 23px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+@media only screen and (max-width: 1050px) {
+  .ask__list-heading {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .ask__list-heading {
+    margin-bottom: 32px;
+  }
 }
 
 .aboutlist {
@@ -2069,6 +2125,8 @@ img {
       -ms-flex-align: start;
           align-items: flex-start;
   max-width: 540px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .aboutlist__label {
@@ -2158,5 +2216,11 @@ img {
   border-bottom: 1px solid #979797;
   resize: none;
   margin-bottom: 24px;
+}
+
+@media only screen and (max-width: 750px) {
+  .aboutlist {
+    max-width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

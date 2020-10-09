@@ -27,15 +27,15 @@
   }
   @include breakpoint-down (750px) {
     
-  padding: 0 0;
-  background-image: none;
-  .container{
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-image: url('../../img/clients-bg.png');
-  background-repeat: no-repeat;
-  background-position: top -100px left  ;
-  }
+    padding: 0 0;
+    background-image: none;
+    .container{
+      padding-top: 100px;
+      padding-bottom: 100px;
+      background-image: url('../../img/clients-bg.png');
+      background-repeat: no-repeat;
+      background-position: top -100px left  ;
+    }
     &__heading{
       font-size: 32px;
       line-height: 1;
